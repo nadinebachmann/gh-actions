@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+second-action-reactjs/node_modules
 dist
 dist-ssr
 *.local
