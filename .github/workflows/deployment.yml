@@ -17,6 +17,7 @@ jobs:
         run: npm test
         working-directory: ./second-action-reactjs
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -32,4 +33,5 @@ jobs:
         run: npm run build
       - name: Deploy
         run: echo "Deploying ..."
+        working-directory: ./second-action-reactjs
 
