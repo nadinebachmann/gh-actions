@@ -10,5 +10,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./second-action-reactjs
       - name: Run tests
         run: npm test
+        working-directory: ./second-action-reactjs
