@@ -1,4 +1,4 @@
-name: Deploy Project
+name: Deploy Second Action ReactJS
 on: [workflow_dispatch]
 jobs:
   test:

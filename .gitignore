@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 second-action-reactjs/node_modules
+little-project/node_modules
 dist
 dist-ssr
 *.local
