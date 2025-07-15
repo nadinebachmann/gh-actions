@@ -1,15 +1,7 @@
 name: Deploy MWS
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Connect to Testserver
-        uses: appleboy/ssh-action@v1.2.2
-        with:
-          host: afg-test.vk-dev.de
-          username: root
-          key: ${{ secrets.SSH_GHA }}
-          script: |
-            cd /var/www/html/gh-actions/
-            git pull
+    uses: nadinebachmann/github-actions-workflows/.github/workflows/deploy.yml@main
+    with:
+      deploy_path: /var/www/html/gh-actions
