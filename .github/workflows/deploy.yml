@@ -5,3 +5,5 @@ jobs:
     uses: nadinebachmann/mws-github-actions-workflows/.github/workflows/deploy.yml@main
     with:
       deploy_path: /var/www/html/gh-actions
+    secrets:
+      SSH_GHA: ${{ secrets.SSH_GHA }}
