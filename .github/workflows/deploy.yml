@@ -9,7 +9,7 @@ jobs:
         with:
           host: afg-test.vk-dev.de
           username: root
-          key: ${{ secrets.KLEMENS_SSH }}
+          key: ${{ secrets.SSH_GHA }}
           script: |
             cd /var/www/html/gh-actions/
             git pull
