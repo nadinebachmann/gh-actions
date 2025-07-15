@@ -1,0 +1,15 @@
+name: Deploy MWS
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect to Testserver
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: afg-test.vk-dev.de
+          username: root
+          key: ${{ secrets.KLEMENS_SSH }}
+          script: |
+            cd /var/www/html/gh-actions/
+            git pull
