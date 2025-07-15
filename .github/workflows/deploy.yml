@@ -2,6 +2,6 @@ name: Deploy MWS
 on: [workflow_dispatch]
 jobs:
   deploy:
-    uses: nadinebachmann/github-actions-workflows/.github/workflows/deploy.yml@main
+    uses: nadinebachmann/mws-github-actions-workflows/.github/workflows/deploy.yml@main
     with:
       deploy_path: /var/www/html/gh-actions
